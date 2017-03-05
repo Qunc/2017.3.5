@@ -1,0 +1,32 @@
+1.prototype:对js内置对象做了大量的扩展
+  
+  YUI:是雅虎公司开发的一套完备的、扩展性良好的富交互网页工具集
+  
+  Dojo:提供了其他库没有的功能，离线存储、图标组件等等。
+
+  Mootools:轻量、简洁、模块化和面向对象的js框架。
+
+  2.jq获取原生dom对象:$('#box').get(0)
+    dom对象转成jq对象:$(document.getElementById('box'))
+
+
+  3.jQuery.noConflict();//自行了断，把自己的$所有权剔除
+
+  4.
+   css(属性名,function(index,value)｛｝）
+   
+   function(index,value)此函数返回要设置的属性值。index为元素在对象集合中的索引位置，value是原先的属性值
+   eg:
+	逐渐增加div的大小
+        $('div').click(function(){
+		$(this).css({
+			width:function(index,value){
+		return  parseFloat(value)*1.2;
+`		
+		},
+			height:function(index,value){
+		return parseFloat(value)*1.2;
+		}
+	`	})
+        })
+

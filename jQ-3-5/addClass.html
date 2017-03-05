@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .par_0{
+            color:blue;
+        }
+        .par_1{
+            color:red;
+        }
+    </style>
+    <script src="jquery-1.8.0.min.js"></script>
+</head>
+<body>
+    <h1>这是一个标题</h1>
+    <p>这是一个段落</p>
+    <p>这是另一个段落</p>
+    <button>为p元素添加类名</button>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+              //  alert(0);
+               // console.log($('p'));
+                $('p').addClass(function(n){
+                   // console.log(n);//0,1
+                    return "par_"+n;
+
+
+                })
+            })
+        })
+    </script>
+</body>
+</html>
